@@ -7,21 +7,20 @@
 # you're doing.
 Vagrant.configure(2) do |config|
 
-  machine_box = "trusty-server-cloudimg-amd64-vagrant-disk1"
-  machine_box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+  machine_box = "xenial-server-cloudimg-amd64-vagrant"
+  machine_box_url = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
 
   config.vm.define "node" do |machine|
     machine.vm.box = machine_box
     machine.vm.box_url = machine_box_url
     machine.vm.hostname = "node"
-    machine.vm.network "private_network", ip: "192.168.8.10"
+    machine.vm.network "private_network", ip: "192.168.88.10"
     machine.vm.provider "virtualbox" do |node|
         node.name = "node"
-        node.memory = 4048
+        node.memory = 2048
         node.cpus = 2
     end
    end
 
 
 end
-
