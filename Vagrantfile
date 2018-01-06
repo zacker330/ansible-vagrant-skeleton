@@ -7,8 +7,9 @@
 # you're doing.
 Vagrant.configure(2) do |config|
 
-  machine_box = "xenial-server-cloudimg-amd64-vagrant"
-  machine_box_url = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
+  # machine_box = "xenial-server-cloudimg-amd64-vagrant"
+  # machine_box_url = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
+
 
   config.vm.define "node" do |machine|
     machine.vm.box = machine_box
